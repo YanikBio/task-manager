@@ -13,7 +13,7 @@ class User(Base):
     password: Mapped[str] = mapped_column(String(50))
     email: Mapped[str] = mapped_column(String(50), unique=True)
     # Связь
-    recipe = relationship('Post', back_populates='user', lazy='select')  # как это поняточки
+    recipe = relationship('Recipe', back_populates='user', lazy='select')  # как это поняточки
 
 
 class Recipe(Base):
@@ -25,4 +25,4 @@ class Recipe(Base):
     describe: Mapped[str] = mapped_column(Text)
     user_id: Mapped[int] = mapped_column(ForeignKey('users.id', ondelete='CASCADE'))  # обрати внимание, идентификатор таблицы, а не класса
     # Связи
-    user: Mapped[User] = relationship('User', back_populates='recipes')
+    user: Mapped[User] = relationship('User', back_populates='recipe')
