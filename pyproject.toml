@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "lesson_45_fastAPI"
+version = "0.1.0"
+description = ""
+authors = ["Andry"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.112.0"
+uvicorn = "^0.30.5"
+sqlalchemy = "^2.0.31"
+typing-extensions = "^4.12.2"
+pydantic = {extras = ["email"], version = "^2.8.2"}
+alembic = "^1.13.2"
+passlib = "^1.7.4"
+bcrypt = "^4.2.0"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
