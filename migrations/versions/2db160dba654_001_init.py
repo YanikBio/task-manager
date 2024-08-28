@@ -1,8 +1,8 @@
 """001_init
 
-Revision ID: 58acdf96c4c6
+Revision ID: 2db160dba654
 Revises: 
-Create Date: 2024-08-26 22:54:11.574607
+Create Date: 2024-08-27 13:17:24.729387
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '58acdf96c4c6'
+revision: str = '2db160dba654'
 down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -33,6 +33,12 @@ def upgrade() -> None:
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('title', sa.String(length=256), nullable=False),
     sa.Column('describe', sa.Text(), nullable=False),
+    sa.Column('ingredients', sa.JSON(), nullable=False),
+    sa.Column('instructions', sa.Text(), nullable=False),
+    sa.Column('prep_time', sa.Integer(), nullable=False),
+    sa.Column('cook_time', sa.Integer(), nullable=False),
+    sa.Column('total_time', sa.Integer(), nullable=False),
+    sa.Column('servings', sa.Integer(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ondelete='CASCADE'),
     sa.PrimaryKeyConstraint('id')

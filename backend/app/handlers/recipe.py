@@ -12,10 +12,19 @@ router = APIRouter(prefix="/recipe", tags=["recipe"])
 
 @router.post("/recipe", response_model=RecipeSchema)
 async def new_recipe(
-        user: RecipeCreateSchema,  session: Session = Depends(get_session)
+        recipe: RecipeCreateSchema,  session: Session = Depends(get_session)
 ):
-    """Registration of new user"""
+    """Registration of new recipe"""
     try:
-        return create_recipe(session, user)
+        return create_recipe(session, recipe)
     except IntegrityError:
-        raise HTTPException(status_code=422, detail='User already exists')
+        raise HTTPException(status_code=422, detail='Recipe already exists')
+
+
+# @router.get("/recipe", response_model=RecipeSchema)
+# async def get_user_recipes(
+#         user_id: int,
+# ):
+#     if user_id not in users_recipes:
+#         raise HTTPException(status_code=404, detail="Пользователь не найден")
+#     return users_recipes[user_id]
