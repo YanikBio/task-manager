@@ -1,8 +1,8 @@
 """001_init
 
-Revision ID: 2db160dba654
+Revision ID: 64c4af2a1b1a
 Revises: 
-Create Date: 2024-08-27 13:17:24.729387
+Create Date: 2024-09-05 20:29:30.169158
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '2db160dba654'
+revision: str = '64c4af2a1b1a'
 down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -23,8 +23,11 @@ def upgrade() -> None:
     op.create_table('users',
     sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
     sa.Column('username', sa.String(length=50), nullable=False),
-    sa.Column('password', sa.String(length=50), nullable=False),
     sa.Column('email', sa.String(length=50), nullable=False),
+    sa.Column('hashed_password', sa.String(length=1024), nullable=False),
+    sa.Column('is_active', sa.Boolean(), nullable=False),
+    sa.Column('is_superuser', sa.Boolean(), nullable=False),
+    sa.Column('is_verified', sa.Boolean(), nullable=False),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('email'),
     sa.UniqueConstraint('username')
@@ -35,10 +38,6 @@ def upgrade() -> None:
     sa.Column('describe', sa.Text(), nullable=False),
     sa.Column('ingredients', sa.JSON(), nullable=False),
     sa.Column('instructions', sa.Text(), nullable=False),
-    sa.Column('prep_time', sa.Integer(), nullable=False),
-    sa.Column('cook_time', sa.Integer(), nullable=False),
-    sa.Column('total_time', sa.Integer(), nullable=False),
-    sa.Column('servings', sa.Integer(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ondelete='CASCADE'),
     sa.PrimaryKeyConstraint('id')
