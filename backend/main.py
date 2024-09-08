@@ -9,6 +9,7 @@ from backend.app.auth.models import User
 # from backend.app.handlers import recipe
 from backend.app.auth.base_config import auth_backend, fastapi_users
 from backend.app.auth.schemas import UserCreateSchema, UserRead
+from backend.app.operations.router import router as router_operation
 
 app = FastAPI()
 # app.include_router(auth.router, prefix="/api/v1")
@@ -30,6 +31,8 @@ app.include_router(
     prefix="/auth",
     tags=["auth"],
 )
+
+app.include_router(router_operation)
 
 origins = [
     "http://localhost.tiangolo.com",
