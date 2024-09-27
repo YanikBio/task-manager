@@ -17,4 +17,5 @@ class User(SQLAlchemyBaseUserTable[int], Base):
     is_superuser: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
     is_verified: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
     # Связь
-
+    # diet: ...
+    recipes = relationship("User", back_populates="creator")

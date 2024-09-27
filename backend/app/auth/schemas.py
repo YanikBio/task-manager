@@ -3,7 +3,6 @@ from pydantic import BaseModel, Field, EmailStr
 from fastapi_users import schemas
 
 
-
 class UserBaseSchema(schemas.BaseUserCreate):
     username: str = Field(..., min_length=2, max_length=50)
     email: EmailStr = Field(..., max_length=256)

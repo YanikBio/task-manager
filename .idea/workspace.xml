@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a62fb1a8-ad23-45c3-a73a-91bb363c399c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/auth/base_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/auth/base_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/auth/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/auth/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/auth/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/auth/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/auth/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/auth/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/auth/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/auth/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/operations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/operations/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/operations/router.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,19 +44,56 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.database.executor": "Run",
+    "Python.something.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/user/Desktop/Study/Progr_progects/task-manager"
+    "last_opened_file_path": "/Users/user/Desktop/Study/Progr_progects/task-manager/backend/app/foodstuffs"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/app/foodstuffs" />
+      <recent name="$PROJECT_DIR$/backend/app/recipes" />
+      <recent name="$PROJECT_DIR$/backend/app/diet" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/backend/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/app/auth" />
+      <recent name="$PROJECT_DIR$/backend" />
+      <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$/backend/app" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="something" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="task-manager" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/something.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.something" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

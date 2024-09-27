@@ -27,6 +27,8 @@ fastapi_users = FastAPIUsers[User, int](
     [auth_backend],
 )
 
+current_user = fastapi_users.current_user()
+
 
 # @router.get("/items/")
 # async def read_items(token: Annotated[str, Depends(oauth2_scheme)]):
